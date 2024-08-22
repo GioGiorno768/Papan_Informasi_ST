@@ -28,7 +28,7 @@ Font dan warna ini telah diatur dalam konfigurasi Tailwind, sehingga bisa langsu
 
 ### 1. Instalasi Dependensi
 
-Pastikan kamu telah menginstal Node.js dan npm di sistem kamu. Lalu, jalankan perintah berikut untuk menginstal semua dependensi yang dibutuhkan oleh proyek:
+Pastikan telah menginstal Node.js dan npm di sistem kamu. Lalu, jalankan perintah berikut untuk menginstal semua dependensi yang dibutuhkan oleh proyek:
 
 ```bash
 npm install
@@ -36,7 +36,7 @@ npm install
 
 ### 2. Menjalankan Proyek
 
-Setelah semua dependensi terinstal, kamu bisa menjalankan proyek dengan perintah:
+Setelah semua dependensi terinstal, jalankan proyek dengan perintah:
 
 ```bash
 npm run dev
