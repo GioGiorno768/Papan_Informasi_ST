@@ -4,12 +4,15 @@
   "description": "front-end Project Taman Sekartaji",
   "main": "index.js",
   "scripts": {
-    "dev" : "npx tailwindcss -i ./public/css/input.css -o ./public/css/style.css --watch",
+    "dev": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kevin",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "swiper": "^11.1.10"
   }
 }
