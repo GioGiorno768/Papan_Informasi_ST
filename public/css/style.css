@@ -1,0 +1,7 @@
+.papan-info {
+  font-size: clamp(1.125rem, 0.6146rem + 1.1667vw, 1.5625rem);
+}
+.sekartaji {
+  -webkit-text-stroke: 1px #fff;
+  text-stroke: 1px #ffff;
+}

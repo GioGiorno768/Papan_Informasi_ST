@@ -4,8 +4,7 @@
   "description": "front-end Project Taman Sekartaji",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch"
   },
   "author": "Kevin",
   "license": "ISC",
