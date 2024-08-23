@@ -40,4 +40,7 @@ Setelah semua dependensi terinstal, jalankan proyek dengan perintah:
 
 ```bash
 npm run dev
+```
+
+Setelah itu jalankan extensi Live Server pada VSCode
 
