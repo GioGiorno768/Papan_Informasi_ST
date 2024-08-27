@@ -1,3 +1,5 @@
+const { addIconSelectors } = require('@iconify/tailwind');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
@@ -6,7 +8,8 @@ module.exports = {
       backgroundColor: {
         dgreen: '#114232',
         grass: '#87A922',
-        ylow: '#FCDC2A'
+        ijo: '#0E5E24',
+        ylow: '#FCDC2A',
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -14,6 +17,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    // Iconify plugin, requires writing list of icon sets to load
+    addIconSelectors(['mdi', 'mdi-light']),
+  ],
 }
 
