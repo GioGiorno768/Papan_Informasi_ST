@@ -24,12 +24,43 @@
     />
   </head>
   <body>
+    <div class="wipe-container">
+      <!-- <div class="wipe2">
+        <img
+          class="w-full"
+          src="../public/img/assets/wipe-container.svg"
+          alt=""
+        />
+      </div> -->
+      <div class="wipe"></div>
+      <div class="wipe"></div>
+      <div class="wipe"></div>
+      <div class="wipe"></div>
+      <div class="wipe"></div>
+      <div class="wipe"></div>
+    </div>
     <main
       id="headers"
+      data-barba="wrapper"
       class="g-dgreen w-full h-screen text-white bg-dgreen relative overflow-hidden"
     >
-      <div class="swiper w-full h-full">
+      <div
+        class="swiper w-full h-full"
+        data-barba="container"
+        data-barba-namespace="page-b"
+      >
         <div class="swiper-wrapper">
+          <div
+            class="absolute z-[99] w-full -top-20 hover:-top-10 duration-[.5s] transition-all flex justify-center"
+          >
+            <a href="./index.html" class="w-fit">
+              <img
+                src="/public/img/assets/Group 79 (6).svg"
+                class="w-[750px]"
+                alt=""
+              />
+            </a>
+          </div>
           <section class="swiper-slide">
             <div class="w-screen h-screen font-poppins flex justify-between">
               <div class="basis-[50%] relative bg-grass overflow-hidden">
@@ -52,60 +83,56 @@
                     >
                       <div class="flex flex-col gap-3">
                         <div
-                          class="px-5 py-2 w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
                         >
                           <span class="material-symbols--smoke-free"></span>
-                          <span
-                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
+                          <span class="xl:text-[1.2vw] text-[1vw]"
                             >Area Bebas Asap Rokok</span
                           >
                         </div>
                         <div
-                          class="px-5 py-2 w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
                         >
                           <span class="lucide--circle-parking"></span>
-                          <span
-                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
+                          <span class="xl:text-[1.2vw] text-[1vw]"
                             >Area Parkir</span
                           >
                         </div>
                         <div
-                          class="px-5 py-2 w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
                         >
                           <span class="lucide--cctv"></span>
-                          <span
-                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
-                            >CCTV</span
-                          >
+                          <span class="xl:text-[1.2vw] text-[1vw]">CCTV</span>
                         </div>
                       </div>
                       <div class="flex flex-col gap-3">
                         <div
-                          class="px-5 py-2 w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
                         >
                           <span class="marketeq--water-tap"></span>
-                          <span
-                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
+                          <span class="xl:text-[1.2vw] text-[1vw]"
                             >Keran Air Siap Minum</span
                           >
                         </div>
                         <div
-                          class="px-5 py-2 w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
                         >
                           <span class="material-symbols--wifi"></span>
-                          <span
-                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
+                          <span class="xl:text-[1.2vw] text-[1vw]"
                             >Free Wifi</span
                           >
                         </div>
                         <div
-                          class="px-5 py-2 w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-3 shadow-lg shadow-black/35 bg-dgreen"
                         >
                           <span class="ph--plugs"></span>
-                          <span
-                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
+                          <span class="xl:text-[1.2vw] text-[1vw]"
                             >Colokan Listrik</span
                           >
+                          <!-- <span
+                            class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
+                            >Colokan Listrik</span
+                          > -->
                         </div>
                       </div>
                     </div>
@@ -115,20 +142,27 @@
               <div class="basis-[50%] relative">
                 <div class="w-fit pt-[5%] px-[9%]">
                   <div class="font-semibold">
-                    <h1
+                    <h1 class="text-[3.4vw]">
+                      Taman
+                      <span class="inline-block bg-white w-[20%] h-1"></span>
+                    </h1>
+                    <!-- <h1
                       class="text-[16px] sm:text-[25px] md:text-[35px] lg:text-[44px] xl:text-[55px]"
                     >
                       Taman
                       <span class="inline-block bg-white w-[20%] h-1"></span>
+                    </h1> -->
+                    <h1 class="text-[4.2vw] lg:-mt-6 md:-mt-5 mt-0">
+                      Sekartaji
                     </h1>
-                    <h1
+                    <!-- <h1
                       class="text-[25px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[75px] lg:-mt-8 -mt-3"
                     >
                       Sekartaji
-                    </h1>
+                    </h1> -->
                   </div>
                   <div
-                    class="text-[12px] mt-3 pe-[5%] text-justify font-righteous w-[80%] h-[135px] custom-scrollbar overflow-y-scroll"
+                    class="text-[1vw] mt-3 pe-[5%] text-justify font-righteous w-[80%] h-[10vw] custom-scrollbar overflow-y-scroll"
                   >
                     <p>
                       Selamat datang di Taman Sekartaji, oase hijau di jantung
@@ -145,55 +179,48 @@
                 <div
                   class="information w-[83%] top-[55%] -ms-[8%] absolute h-[40%] bg-ijo px-[7%] py-[3.5%] shadow-lg shadow-black/20"
                 >
-                  <h1 class="font-righteous text-[38px]">Detail Informasi</h1>
+                  <h1 class="font-righteous text-[2vw]">Detail Informasi</h1>
+                  <!-- <h1 class="font-righteous text-[38px]">Detail Informasi</h1> -->
                   <div
                     class="mt-[3%] w-[80%] flex flex-col gap-2 font-righteous h-[65%] overflow-hidden"
                   >
-                    <div class="flex justify-start items-center">
-                      <div
+                    <div class="flex justify-start items-center text-[1.2vw]">
+                      <div class="basis-[140px] gap-3 flex items-center">
+                        <span
+                          class="material-symbols-light--width-wide-outline"
+                        ></span>
+                        <span>Luas</span>
+                      </div>
+                      <!-- <div
                         class="basis-[140px] text-[.5em] sm:text-[.7em] md:text-[.9em] gap-3 flex items-center"
                       >
                         <span
                           class="material-symbols-light--width-wide-outline"
                         ></span>
                         <span>Luas</span>
-                      </div>
-                      <span class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
-                        >: 7000 m2</span
-                      >
+                      </div> -->
+                      <span>: 7000 m2</span>
                     </div>
-                    <div class="flex justify-start items-center">
-                      <div
-                        class="basis-[140px] text-[.5em] sm:text-[.7em] md:text-[.9em] gap-3 flex items-center"
-                      >
+                    <div class="flex justify-start items-center text-[1.2vw]">
+                      <div class="basis-[140px] gap-3 flex items-center">
                         <span class="game-icons--inauguration"></span>
                         <span>Peresmian</span>
                       </div>
-                      <span class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
-                        >: 26 September 2017</span
-                      >
+                      <span>: 26 September 2017</span>
                     </div>
-                    <div class="flex justify-start items-center">
-                      <div
-                        class="basis-[140px] text-[.5em] sm:text-[.7em] md:text-[.9em] gap-3 flex items-center"
-                      >
+                    <div class="flex justify-start items-center text-[1.2vw]">
+                      <div class="basis-[140px] gap-3 flex items-center">
                         <span class="hugeicons--manager"></span>
                         <span>Pengelola</span>
                       </div>
-                      <span class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
-                        >: Pemerintahan Kota Kediri</span
-                      >
+                      <span>: Pemerintahan Kota Kediri</span>
                     </div>
-                    <div class="flex justify-start items-center">
-                      <div
-                        class="basis-[140px] text-[.5em] sm:text-[.7em] md:text-[.9em] gap-3 flex items-center"
-                      >
+                    <div class="flex justify-start items-center text-[1.2vw]">
+                      <div class="basis-[140px] gap-3 flex items-center">
                         <span class="ic--outline-place"></span>
                         <span>Alamat</span>
                       </div>
-                      <span class="text-[.5em] sm:text-[.7em] md:text-[.9em]"
-                        >: Jl. Veteran, Mojoroto, Kediri</span
-                      >
+                      <span>: Jl. Veteran, Mojoroto, Kediri</span>
                     </div>
                   </div>
                 </div>
@@ -343,7 +370,7 @@
       </div>
       <!-- If we need navigation buttons -->
       <!-- Tombol Kustom -->
-      <div class="absolute w-full top-[50%] z-[99]">
+      <div class="nex-prev absolute w-full top-[50%] z-[99]">
         <div class="flex justify-between">
           <div
             class="custom-swiper-button-prev opacity-0 -translate-x-[50px] transition-all duration-[.5s] hover:-translate-x-[20px]"
@@ -370,6 +397,17 @@
         </div>
       </div>
     </main>
+    <!-- ========= barba js ======= -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- ========= load gsap animtion ========= -->
+    <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"
+      integrity="sha512-O+atZ/gABlcFlpIoLQR04f72qHqZWKwTVsQZHqk/8VE2nrzDlnqhXbnXP7Gh/TyhpPT8tEUm5A580GG8AloHTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <script type="module" src="/public/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
