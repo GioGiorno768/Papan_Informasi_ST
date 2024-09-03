@@ -39,25 +39,64 @@
       <div class="wipe"></div>
     </div>
     <main
-      data-barba="wrapper"
       id="headers"
-      class="w-full h-screen text-white bg-dgreen relative overflow-hidden"
+      data-barba="wrapper"
+      class="w-screen h-screen relative overflow-hidden bg-gradient-to-br from-green-900 to-dgreen"
     >
-      <div data-barba="container" data-barba-namespace="page-a" class="w-full h-full">
-        <div>
-          <section>
-            <div class="w-screen h-screen font-poppins flex justify-between">
-              <div class="w-[100%] h-[100%] flex justify-center items-center">
-                <a
-                  href="./slide.html"
-                  class="px-5 text-lg py-1 rounded-md bg-grass"
-                  >Next</a
-                >
-              </div>
-            </div>
-          </section>
+      <section
+        class="w-full h-full overflow-hidden"
+        data-barba="container"
+        data-barba-namespace="page-a"
+      >
+        <h1
+          class="papan-info text-white text-3xl font-righteous font-light ms-16 pt-10"
+        >
+          Papan Informasi
+        </h1>
+        <span
+          class="b-kediri text-10xl -mt-2 tracking-wide z-0 latter-name font-poppins text-white font-bold absolute -left-8 opacity-10"
+          >Kediri</span
+        >
+        <span
+          class="b-sekartaji text-10xl latter-name z-0 font-poppins text-white font-bold absolute opacity-10 bottom-1 left-1/4"
+          >Sekartaji</span
+        >
+        <div
+          class="swipe-right relative text-white font-poppins w-1/2 flex mt-7"
+        >
+          <img
+            class="inset-4 absolute left-0"
+            src="../public/img/assets/Ellipse.png"
+            alt=""
+            srcset=""
+          />
+          <div class="relative ms-[8%] mt-60 flex-col flex justify-center">
+            <h2 class="swipe-up text-4xl font-bold">Taman</h2>
+            <b class="swipe-up font-bold text-[112px] leading-none"
+              >Sekartaji</b
+            >
+            <span
+              class="swipe-up sekartaji opacity-70 absolute text-8xl bottom-8 font-bold -left-24 text-transparent"
+              >Sekartaji</span
+            >
+            <h3 class="swipe-up font-bold text-right text-5xl mt-5">Kediri</h3>
+          </div>
         </div>
-      </div>
+
+        <img
+          class="swipe-left absolute top-0 right-0 w-1/2 h-full"
+          src="../public/img/assets/img-welcome.png"
+          alt=""
+        />
+        <a href="./slide.html">
+          <img
+            class="left-[30%] absolute w-1/2 -bottom-7 transition-all ease-in hover:bottom-0 z-10 duration-300 cursor-pointer"
+            src="../public/img/assets/button-to-bottom.svg"
+            alt=""
+            srcset=""
+          />
+        </a>
+      </section>
       <div class="nex-prev absolute w-full top-[50%] z-[99]">
         <div class="flex justify-between">
           <div
@@ -85,12 +124,13 @@
         </div>
       </div>
     </main>
-    
-    <div class="cover"></div>
+
     <!-- ========= barba js ======= -->
     <script src="https://unpkg.com/@barba/core"></script>
     <!-- ========= load gsap animtion ========= -->
     <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <!-- CustomEase Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"
       integrity="sha512-O+atZ/gABlcFlpIoLQR04f72qHqZWKwTVsQZHqk/8VE2nrzDlnqhXbnXP7Gh/TyhpPT8tEUm5A580GG8AloHTA=="

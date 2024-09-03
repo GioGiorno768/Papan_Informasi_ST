@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import AOS CSS */
+@import "/node_modules/aos/dist/aos.css";
+
 @layer base {
   html {
     color: #FFFFFF;

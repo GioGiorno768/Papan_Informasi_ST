@@ -47,6 +47,53 @@ document.addEventListener("DOMContentLoaded", () => {
   nav.style.display = "none";
   console.log(nav);
 
+  gsap.from(".swipe-right", {
+    x: -100,
+    duration: 1.5,
+    opacity: 0,
+    ease: CustomEase.create(
+      "custom",
+      "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+    ),
+  });
+  gsap.from(".swipe-up", {
+    y: 100,
+    duration: 1.5,
+    opacity: 0,
+    ease: "circ.out",
+  });
+
+  gsap.from(".swipe-left", {
+    x: 300,
+    duration: 1.5,
+    opacity: 0,
+    ease: CustomEase.create(
+      "custom",
+      "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+    ),
+  });
+
+  gsap.from(".b-kediri", {
+    x: -200,
+    duration: 1,
+    opacity: 0,
+    delay: 1,
+    ease: CustomEase.create(
+      "custom",
+      "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+    ),
+  });
+  gsap.from(".b-sekartaji", {
+    x: 600,
+    duration: 1,
+    opacity: 0,
+    delay: 1,
+    ease: CustomEase.create(
+      "custom",
+      "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+    ),
+  });
+
   barba.init({
     transitions: [
       {
@@ -112,8 +159,86 @@ document.addEventListener("DOMContentLoaded", () => {
                 y: "100%",
                 duration: 1,
                 stagger: 0.1,
+                onComplete: () => {
+                  console.log("on");
+                },
               }
             );
+            gsap.fromTo(
+              ".swipe-right",
+              {
+                x: -100,
+                opacity: 0,
+              },
+              {
+                x: 0,
+                opacity: 1,
+                delay: .5,
+                duration: 1.5,
+                ease: CustomEase.create(
+                  "custom",
+                  "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+                ),
+              }
+            );
+            gsap.fromTo(
+              ".swipe-up",
+              {
+                y: 150,
+                opacity: 0,
+              },
+              {
+                y: 0,
+                opacity: 1,
+                delay: .5,
+                duration: 1.5,
+                ease: "circ.out",
+              }
+            );
+            gsap.fromTo(
+              ".swipe-left",
+              {
+                x: 300,
+                opacity: 0,
+              },
+              {
+                x: 0,
+                duration: 1.5,
+                delay: .5,
+                opacity: 1,
+                ease: CustomEase.create(
+                  "custom",
+                  "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+                ),
+              }
+            );
+            gsap.fromTo(".b-kediri", {
+              x: -200,
+              opacity: 0
+            }, {
+              x: 0,
+              opacity: .1,
+              delay: 1.5,
+              duration: 1,
+              ease: CustomEase.create(
+                "custom",
+                "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+              ),
+            });
+            gsap.fromTo(".b-sekartaji", {
+              x: 600,
+              opacity: 0
+            }, {
+              x: 0,
+              opacity: .1,
+              delay: 1.5,
+              duration: 1,
+              ease: CustomEase.create(
+                "custom",
+                "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+              ),
+            });
+            
           } else if (namespace === "page-b") {
             gsap.fromTo(
               ".wipe",
