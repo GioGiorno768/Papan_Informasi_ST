@@ -47,31 +47,57 @@ document.addEventListener("DOMContentLoaded", () => {
   nav.style.display = "none";
   console.log(nav);
 
-  gsap.from(".swipe-right", {
-    x: -100,
-    duration: 1.5,
-    opacity: 0,
-    ease: CustomEase.create(
-      "custom",
-      "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
-    ),
-  });
-  gsap.from(".swipe-up", {
-    y: 100,
-    duration: 1.5,
-    opacity: 0,
-    ease: "circ.out",
-  });
-
-  gsap.from(".swipe-left", {
-    x: 300,
-    duration: 1.5,
-    opacity: 0,
-    ease: CustomEase.create(
-      "custom",
-      "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
-    ),
-  });
+  gsap.fromTo(
+    ".swipe-right",
+    {
+      x: -100,
+      duration: .5,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      opacity: 10,
+      delay: .5,
+      duration: 1.5,
+      ease: CustomEase.create(
+        "custom",
+        "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+      ),
+    }
+  );
+  gsap.fromTo(
+    ".swipe-up",
+    {
+      y: 150,
+      duration: .5,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 10,
+      duration: 1.5,
+      delay: .5,
+      ease: "circ.out",
+    }
+  );
+  gsap.fromTo(
+    ".swipe-left",
+    {
+      x: 300,
+      duration: .5,
+      opacity: 0,
+    },
+    {
+      x: 0,
+      duration: 1.5,
+      opacity: 10,
+      delay: .5,
+      ease: CustomEase.create(
+        "custom",
+        "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+      ),
+    }
+  );
 
   gsap.from(".b-kediri", {
     x: -200,
@@ -172,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
               },
               {
                 x: 0,
-                opacity: 1,
+                opacity: 10,
                 delay: .5,
                 duration: 1.5,
                 ease: CustomEase.create(
@@ -189,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
               },
               {
                 y: 0,
-                opacity: 1,
+                opacity: 10,
                 delay: .5,
                 duration: 1.5,
                 ease: "circ.out",
@@ -205,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 x: 0,
                 duration: 1.5,
                 delay: .5,
-                opacity: 1,
+                opacity: 10,
                 ease: CustomEase.create(
                   "custom",
                   "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
@@ -253,6 +279,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
               }
             );
+            gsap.fromTo(
+              ".fade-up",
+              {height: "0%"},
+              {
+                height: "auto",
+                duration: 1.2,
+                delay: .8,
+                // ease: CustomEase.create(
+                //   "custom",
+                //   "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+                // ),
+              }
+            )
           }
 
           gsap.from(data.next.container, 1.5, {
