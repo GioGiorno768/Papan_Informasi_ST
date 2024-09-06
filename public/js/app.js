@@ -14,8 +14,12 @@ function initSwiper() {
     },
     on: {
       slideChange: function () {
-        const prevButton = document.querySelector(".custom-swiper-button-prev");
-        const nextButton = document.querySelector(".custom-swiper-button-next");
+        const prevButton = document.querySelector(
+          ".custom-swiper-button-prev"
+        );
+        const nextButton = document.querySelector(
+          ".custom-swiper-button-next"
+        );
 
         if (this.activeIndex > 0) {
           prevButton.classList.remove("opacity-0");
@@ -51,13 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
     ".swipe-right",
     {
       x: -100,
-      duration: .5,
+      duration: 0.5,
       opacity: 0,
     },
     {
       x: 0,
       opacity: 10,
-      delay: .5,
+      delay: 0.5,
       duration: 1.5,
       ease: CustomEase.create(
         "custom",
@@ -69,14 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ".swipe-up",
     {
       y: 150,
-      duration: .5,
+      duration: 0.5,
       opacity: 0,
     },
     {
       y: 0,
       opacity: 10,
       duration: 1.5,
-      delay: .5,
+      delay: 0.5,
       ease: "circ.out",
     }
   );
@@ -84,14 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ".swipe-left",
     {
       x: 300,
-      duration: .5,
+      duration: 0.5,
       opacity: 0,
     },
     {
       x: 0,
       duration: 1.5,
       opacity: 10,
-      delay: .5,
+      delay: 0.5,
       ease: CustomEase.create(
         "custom",
         "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
@@ -169,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             );
           }
-          return gsap.to(data.current.container, 1, {
+          return gsap.to(data.current.container, 3, {
             opacity: 1,
           });
         },
@@ -199,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
               {
                 x: 0,
                 opacity: 10,
-                delay: .5,
+                delay: 0.5,
                 duration: 1.5,
                 ease: CustomEase.create(
                   "custom",
@@ -216,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
               {
                 y: 0,
                 opacity: 10,
-                delay: .5,
+                delay: 0.5,
                 duration: 1.5,
                 ease: "circ.out",
               }
@@ -230,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
               {
                 x: 0,
                 duration: 1.5,
-                delay: .5,
+                delay: 0.5,
                 opacity: 10,
                 ease: CustomEase.create(
                   "custom",
@@ -238,33 +242,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 ),
               }
             );
-            gsap.fromTo(".b-kediri", {
-              x: -200,
-              opacity: 0
-            }, {
-              x: 0,
-              opacity: .1,
-              delay: 1.5,
-              duration: 1,
-              ease: CustomEase.create(
-                "custom",
-                "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
-              ),
-            });
-            gsap.fromTo(".b-sekartaji", {
-              x: 600,
-              opacity: 0
-            }, {
-              x: 0,
-              opacity: .1,
-              delay: 1.5,
-              duration: 1,
-              ease: CustomEase.create(
-                "custom",
-                "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
-              ),
-            });
-            
+            gsap.fromTo(
+              ".b-kediri",
+              {
+                x: -200,
+                opacity: 0,
+              },
+              {
+                x: 0,
+                opacity: 0.1,
+                delay: 1.5,
+                duration: 1,
+                ease: CustomEase.create(
+                  "custom",
+                  "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+                ),
+              }
+            );
+            gsap.fromTo(
+              ".b-sekartaji",
+              {
+                x: 600,
+                opacity: 0,
+              },
+              {
+                x: 0,
+                opacity: 0.1,
+                delay: 1.5,
+                duration: 1,
+                ease: CustomEase.create(
+                  "custom",
+                  "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+                ),
+              }
+            );
           } else if (namespace === "page-b") {
             gsap.fromTo(
               ".wipe",
@@ -281,20 +292,20 @@ document.addEventListener("DOMContentLoaded", () => {
             );
             gsap.fromTo(
               ".fade-up",
-              {height: "0%"},
+              { height: "0%" },
               {
                 height: "auto",
                 duration: 1.2,
-                delay: .8,
+                delay: 0.8,
                 // ease: CustomEase.create(
                 //   "custom",
                 //   "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
                 // ),
               }
-            )
+            );
           }
 
-          gsap.from(data.next.container, 1.5, {
+          gsap.from(data.next.container, 3, {
             opacity: 1,
           });
 
