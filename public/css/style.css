@@ -33,28 +33,27 @@
   opacity: 0;
   pointer-events: none;
 }
-.caption {
-  z-index: 99999;
-  color: white;
-  right: 50%;
-  padding-top: 15%;
-}
-.caption h2 {
-  font-size: 100px;
-}
-.caption h2 span {
-  width: 100px;
-  height: 30px;
-  background-color: white;
-}
-.caption h1 {
-  font-size: 150px;
-}
-
 .wipe {
   background-color: #13841e;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+.wipe h2 {
+  font-size: 100px;
+}
+.wipe h2 span {
+  width: 100px;
+  height: 30px;
+  background-color: white;
+}
+.wipe h1 {
+  font-size: 150px;
 }
 
 .information::before {
@@ -195,4 +194,9 @@
   mask-image: url("/public/img/assets/Subtract.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
+}
+.containerQrCode {
+  background: url("/public/img/assets/containerQRCode.svg") no-repeat;
+  background-size: cover;
+  background-position: top;
 }
