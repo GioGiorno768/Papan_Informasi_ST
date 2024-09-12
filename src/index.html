@@ -24,24 +24,25 @@
   </head>
   <body>
     <div class="wipe-container">
-      <!-- <div class="wipe2">
-        <img
-          class="w-full"
-          src="../public/img/assets/wipe-container.svg"
-          alt=""
-        />
-      </div> -->
-      <div class="wipe"></div>
-      <div class="wipe"></div>
-      <div class="wipe"></div>
-      <div class="wipe"></div>
-      <div class="wipe"></div>
-      <div class="wipe"></div>
+      <div class="relative w-full h-full">
+        <div class="wipe bg-ylow"></div>
+        <div class="wipe bg-grass"></div>
+        <div
+          class="wipe bg-dgreen font-poppins font-semibold flex justify-center items-center"
+        >
+          <div>
+            <h2 class="text-[6vw]">
+              Taman <span class="inline-block w-[15vw] h-[1vw] bg-white"></span>
+            </h2>
+            <h1 class="-mt-[4vw] text-[10vw]">Sekartaji</h1>
+          </div>
+        </div>
+      </div>
     </div>
     <main
       id="headers"
       data-barba="wrapper"
-      class="w-screen h-screen relative overflow-hidden bg-gradient-to-br from-green-900 to-dgreen"
+      class="w-screen h-screen relative overflow-hidden bg-dgreen"
     >
       <section
         class="w-full h-full overflow-hidden"
@@ -49,53 +50,49 @@
         data-barba-namespace="page-a"
       >
         <h1
-          class="papan-info text-white text-3xl font-righteous font-light ms-16 pt-10"
+          class="papan-info text-white text-[1.5vw] font-righteous font-light ms-[4vw] pt-[2vw]"
         >
           Papan Informasi
         </h1>
         <span
-          class="b-kediri text-10xl -mt-2 tracking-wide z-0 latter-name font-poppins text-white font-bold absolute -left-8 opacity-10"
+          class="b-kediri text-[12vw] -mt-[2vw] tracking-wide z-0 font-poppins text-white font-bold absolute opacity-[.06]"
           >Kediri</span
         >
         <span
-          class="b-sekartaji text-10xl latter-name z-0 font-poppins text-white font-bold absolute opacity-10 bottom-1 left-1/4"
+          class="b-sekartaji text-[16vw] z-0 font-poppins text-white font-bold absolute opacity-[.06] bottom-[.3vw] left-[15vw]"
           >Sekartaji</span
         >
         <div
-          class="swipe-right relative text-white font-poppins w-1/2 flex mt-7"
+          class="w-[50vw] relative z-[10] h-full flex items-center font-poppins"
         >
-          <img
-            class="inset-4 absolute left-0"
-            src="../public/img/assets/Ellipse.png"
-            alt=""
-            srcset=""
-          />
-          <div class="relative ms-[8%] mt-60 flex-col flex justify-center">
-            <h2 class="swipe-up text-4xl font-bold">Taman</h2>
-            <b class="swipe-up font-bold text-[112px] leading-none"
-              >Sekartaji</b
-            >
+          <div class="w-[80%] swipe-right h-[45vw] bg-elipse relative">
             <span
-              class="swipe-up sekartaji opacity-70 absolute text-8xl bottom-8 font-bold -left-24 text-transparent"
+              class="swipe-up inline-block absolute text-[6.5vw] sekartaji text-transparent font-bold bottom-[20vw] -left-[3vw]"
               >Sekartaji</span
             >
-            <h3 class="swipe-up font-bold text-right text-5xl mt-5">Kediri</h3>
+            <div class="swipe-up ms-[4vw] w-[75%] mt-[10vw]">
+              <h2 class="text-[3vw] font-bold">Taman</h2>
+              <h1 class="text-[6.5vw] font-bold -mt-[2vw]">Sekartaji</h1>
+              <h2 class="text-[3vw] font-bold text-end">Kediri</h2>
+            </div>
           </div>
         </div>
-
         <img
           class="swipe-left absolute top-0 right-0 w-1/2 h-full"
           src="../public/img/assets/img-welcome.png"
           alt=""
         />
-        <a href="./slide.html">
-          <img
-            class="left-[30%] absolute w-1/2 -bottom-7 transition-all ease-in hover:bottom-0 z-10 duration-300 cursor-pointer"
-            src="../public/img/assets/button-to-bottom.svg"
-            alt=""
-            srcset=""
-          />
-        </a>
+        <div
+          class="absolute z-[99] w-full -bottom-[4.2vw] hover:-bottom-[2vw] duration-[.5s] transition-all flex justify-center"
+        >
+          <a href="./slide.html" class="w-fit">
+            <img
+              src="/public/img/assets/Group 79 (7).svg"
+              class="w-[50vw]"
+              alt=""
+            />
+          </a>
+        </div>
       </section>
       <div class="nex-prev absolute w-full top-[50%] z-[99]">
         <div class="flex justify-between">
@@ -104,7 +101,7 @@
           >
             <button class="p-2">
               <img
-                src="../public/img/assets/Group 79 (2).svg"
+                src="../public/img/assets/Group 81.svg"
                 class="-mt-[310px]"
                 alt=""
               />

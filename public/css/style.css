@@ -1,15 +1,14 @@
-.papan-info {
-  font-size: clamp(1.125rem, 0.6146rem + 1.1667vw, 1.5625rem);
+.bg-elipse {
+  background-image: url(/public/img/assets/Ellipse.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+
 .sekartaji {
-  -webkit-text-stroke: 1px #fff;
-  text-stroke: 1px #ffff;
+  -webkit-text-stroke: .05vw #fff;
+  text-stroke: .05vw #ffff;
 }
-
-.img-sekartaji {
-  background-image: url(/public/img/sekartaji\ 1.svg);
-}
-
 .fasilitas {
   background-image: url(/public/img/fasilitas.svg);
 }
@@ -28,25 +27,68 @@
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
   z-index: 999;
   opacity: 0;
   pointer-events: none;
 }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.childs {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.child-swiper {
+  width: 80%;
+}
+
+.swiper-pagination {
+  width: 100%;
+  height: 1vw;
+}
+
+.inner-swiper {
+  border-radius: 0.4vw;
+  box-shadow: 0.6vw 0.6vw 0.7vw rgba(0, 0, 0, 0.384);
+}
+
+.inner-swiper:hover {
+  box-shadow: 0.3vw 0.3vw 0.5vw rgba(0, 0, 0, 0.384);
+}
+/* Warna bullet pagination default */
+.swiper-pagination .swiper-pagination-bullet {
+  width: 0.7vw;
+  height: 0.7vw;
+  background-color: #1b6130; /* Warna bullet tidak aktif */
+}
+
+/* Warna bullet pagination aktif */
 
 .wipe {
-  background-color: #13841e;
   width: 100%;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .information::before {
   content: "";
   position: absolute;
   width: 20%;
-  height: 10px;
+  height: .8vw;
   background-color: #fcdc2a;
-  bottom: -10px;
+  bottom: -.8vw;
   left: 0;
 }
 
@@ -54,9 +96,9 @@
   content: "";
   position: absolute;
   width: 20%;
-  height: 10px;
+  height: .8vw;
   background-color: #fcdc2a;
-  top: -10px;
+  top: -.8vw;
   right: 0;
 }
 
@@ -66,7 +108,43 @@
 
 /* Scroll */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px; /* Lebar scrollbar */
+  width: .8vw; /* Lebar scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fcdc2a69;
+  border-radius: 10px; /* Warna latar belakang track scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #fcdc2a; /* Warna thumb scrollbar */
+  border-radius: 10px; /* Border untuk thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #87a922; /* Warna thumb saat di-hover */
+}
+/* Scroll */
+.custom-scrollbar::-moz-scrollbar {
+  width: .8vw; /* Lebar scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fcdc2a69;
+  border-radius: 10px; /* Warna latar belakang track scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #fcdc2a; /* Warna thumb scrollbar */
+  border-radius: 10px; /* Border untuk thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #87a922; /* Warna thumb saat di-hover */
+}
+/* Scroll */
+.custom-scrollbar::-webkit-scrollbar {
+  width: .8vw; /* Lebar scrollbar */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -86,8 +164,8 @@
 /* Icon */
 .material-symbols--smoke-free {
   display: inline-block;
-  width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19.8 22.6L13.2 16H2v-3h8.2L1.4 4.2l1.4-1.4l18.4 18.4zm-.95-6.6l-.85-.85V13h1.5v3zm1.65 0v-3H22v3zM17 14.15L15.85 13H17zM18 12v-1.3q0-.975-.575-1.487T16.05 8.7H14.5q-1.4 0-2.375-.975T11.15 5.35t.975-2.375T14.5 2v1.5q-.75 0-1.3.525t-.55 1.325t.55 1.325t1.3.525h1.55q1.4 0 2.425.9t1.025 2.25V12zm2.5 0V9.75q0-1.65-1.15-2.85T16.5 5.7V4.2q.75 0 1.3-.55t.55-1.3h1.5q0 .725-.275 1.313T18.85 4.75q1.4.65 2.275 2t.875 3V12z'/%3E%3C/svg%3E");
@@ -95,8 +173,8 @@
 
 .lucide--circle-parking {
   display: inline-block;
-   width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9 17V7h4a3 3 0 0 1 0 6H9'/%3E%3C/g%3E%3C/svg%3E");
@@ -104,8 +182,8 @@
 
 .lucide--cctv {
   display: inline-block;
-   width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16.75 12h3.632a1 1 0 0 1 .894 1.447l-2.034 4.069a1 1 0 0 1-1.708.134l-2.124-2.97m1.696-5.627a1 1 0 0 1 .447 1.341l-3.106 6.211a1 1 0 0 1-1.342.447L3.61 12.3a2.92 2.92 0 0 1-1.3-3.91L3.69 5.6a2.92 2.92 0 0 1 3.92-1.3zM2 19h3.76a2 2 0 0 0 1.8-1.1L9 15m-7 6v-4m5-8h.01'/%3E%3C/svg%3E");
@@ -113,8 +191,8 @@
 
 .marketeq--water-tap {
   display: inline-block;
-   width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.45'%3E%3Cpath stroke='white' d='M22.917 10.417v8m-6.25-8h12.5z'/%3E%3Cpath stroke='white' d='M6.25 18.75v16.667m29.167-12.5h-4.959a2.08 2.08 0 0 1-1.875-1.146l-.916-1.875a2.08 2.08 0 0 0-1.875-1.146h-5.75a2.08 2.08 0 0 0-1.875 1.146l-.917 1.875a2.08 2.08 0 0 1-1.875 1.146H6.25v8.333h27.083a2.083 2.083 0 0 1 2.084 2.083V37.5a2.083 2.083 0 0 0 2.083 2.083h4.167A2.083 2.083 0 0 0 43.75 37.5v-6.25a8.333 8.333 0 0 0-8.333-8.333'/%3E%3C/g%3E%3C/svg%3E");
@@ -122,8 +200,8 @@
 
 .material-symbols--wifi {
   display: inline-block;
-   width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 21q-1.05 0-1.775-.725T9.5 18.5t.725-1.775T12 16t1.775.725t.725 1.775t-.725 1.775T12 21m-5.65-5.65l-2.1-2.15q1.475-1.475 3.463-2.337T12 10t4.288.875t3.462 2.375l-2.1 2.1q-1.1-1.1-2.55-1.725T12 13t-3.1.625t-2.55 1.725M2.1 11.1L0 9q2.3-2.35 5.375-3.675T12 4t6.625 1.325T24 9l-2.1 2.1q-1.925-1.925-4.462-3.012T12 7T6.563 8.088T2.1 11.1'/%3E%3C/svg%3E");
@@ -131,8 +209,8 @@
 
 .ph--plugs {
   display: inline-block;
-   width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='white' d='M149.66 138.34a8 8 0 0 0-11.32 0L120 156.69L99.31 136l18.35-18.34a8 8 0 0 0-11.32-11.32L88 124.69l-18.34-18.35a8 8 0 0 0-11.32 11.32l6.35 6.34l-23.32 23.31a32 32 0 0 0 0 45.26l5.38 5.37l-28.41 28.4a8 8 0 0 0 11.32 11.32l28.4-28.41l5.37 5.38a32 32 0 0 0 45.26 0L132 191.31l6.34 6.35a8 8 0 0 0 11.32-11.32L131.31 168l18.35-18.34a8 8 0 0 0 0-11.32m-52.29 65a16 16 0 0 1-22.62 0l-22.06-22.09a16 16 0 0 1 0-22.62L76 135.31L120.69 180Zm140.29-185a8 8 0 0 0-11.32 0l-28.4 28.41l-5.37-5.38a32.05 32.05 0 0 0-45.26 0L124 64.69l-6.34-6.35a8 8 0 0 0-11.32 11.32l80 80a8 8 0 0 0 11.32-11.32l-6.35-6.34l23.32-23.31a32 32 0 0 0 0-45.26l-5.38-5.37l28.41-28.4a8 8 0 0 0 0-11.32m-34.35 79L180 120.69L135.31 76l23.32-23.31a16 16 0 0 1 22.62 0l22.06 22a16 16 0 0 1 0 22.68Z'/%3E%3C/svg%3E");
@@ -140,7 +218,7 @@
 
 .material-symbols-light--width-wide-outline {
   display: inline-block;
-   width: 2vw;
+  width: 2vw;
   height: 2vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -149,7 +227,7 @@
 
 .game-icons--inauguration {
   display: inline-block;
-   width: 2vw;
+  width: 2vw;
   height: 2vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -158,7 +236,7 @@
 
 .hugeicons--manager {
   display: inline-block;
-   width: 2vw;
+  width: 2vw;
   height: 2vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -167,9 +245,71 @@
 
 .ic--outline-place {
   display: inline-block;
-   width: 2vw;
+  width: 2vw;
   height: 2vw;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M12 12c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2m6-1.8C18 6.57 15.35 4 12 4s-6 2.57-6 6.2c0 2.34 1.95 5.44 6 9.14c4.05-3.7 6-6.8 6-9.14M12 2c4.2 0 8 3.22 8 8.2c0 3.32-2.67 7.25-8 11.8c-5.33-4.55-8-8.48-8-11.8C4 5.22 7.8 2 12 2'/%3E%3C/svg%3E");
+}
+
+.maskImage {
+  mask-image: url("/public/img/assets/Subtract.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.img-sekartaji::before {
+  content: "";
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background-image: url(/public/img/assets/Slice\ 1\ \(4\).svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+}
+.img-sekartaji::after {
+  content: "";
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background-image: url(/public/img/assets/Slice\ 1\ \(4\).svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+.img-sekartaji2::before {
+  content: "";
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background-image: url(/public/img/assets/Slice\ 1\ \(5\).svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+}
+.img-sekartaji2::after {
+  content: "";
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  background-image: url(/public/img/assets/Slice\ 1\ \(5\).svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.qr-code {
+  background: url("/public/img/assets/containerQRCode.svg") no-repeat;
+  background-size: 100% 100%;
 }

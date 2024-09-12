@@ -7,6 +7,13 @@
 
 @layer base {
   html {
-    color: #FFFFFF;
+    color: #ffffff;
+  }
+  .swiper-pagination-bullet {
+    @apply bg-gray-300; /* Warna bullet tidak aktif */
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-red-500; /* Warna bullet aktif */
   }
 }
+

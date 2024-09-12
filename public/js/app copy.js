@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (namespace === "page-a") {
             gsap.fromTo(
-              ".wipe-container", 
-              .2,
+              ".wipe-container",
+              1,
               { opacity: "0" },
               { opacity: "1" }
             );
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
           } else if (namespace === "page-b") {
             gsap.fromTo(
               ".wipe-container",
-              .2,
+              1,
               { opacity: "0" },
               { opacity: "1" }
             );
@@ -194,7 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             );
           }
-          return gsap.to(data.current.container, 1.5, {
+          return gsap.to(data.current.container, 1, {
+            opacity: 1,
           });
         },
         async enter(data) {
@@ -208,10 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
               {
                 y: "100%",
                 duration: 1,
-                stagger: {
-                  each: 0.1,
-                  from: "end"
-                },
+                stagger: 0.1,
                 onComplete: () => {
                   console.log("on");
                 },
@@ -303,10 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
               {
                 y: "-100%",
                 duration: 1,
-                stagger: {
-                  each: 0.1,
-                  from: "end"
-                },
+                stagger: 0.1,
                 onComplete: () => {
                   swiper = initSwiper();
                   swiper2 = childSwiper() // Inisialisasi ulang Swiper setelah masuk halaman baru
@@ -320,6 +315,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 height: "auto",
                 duration: 1.2,
                 delay: .8,
+                // ease: CustomEase.create(
+                //   "custom",
+                //   "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
+                // ),
               }
             )
           }

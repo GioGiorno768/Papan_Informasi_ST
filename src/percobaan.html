@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Swiper JS Example</title>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <style>
+      /* Basic Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 300px;
+      }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd;
+      }
+
+      .child-swiper {
+        width: 80%;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Swiper Induk -->
+    <div class="swiper parent-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">Parent Slide 1</div>
+
+        <!-- Slide 2 (Contains Child Swiper) -->
+        <div class="relative swiper-slide">
+          <div class="swiper child-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Child Slide 1</div>
+              <div class="swiper-slide">Child Slide 2</div>
+              <div class="swiper-slide">Child Slide 3</div>
+            </div>
+            <!-- Navigation buttons for child swiper -->
+            <div class="swiper-button-next child-next"></div>
+            <div class="swiper-button-prev child-prev"></div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">Parent Slide 3</div>
+      </div>
+      <!-- Navigation buttons for parent swiper -->
+      <div class="swiper-button-next parent-next"></div>
+      <div class="swiper-button-prev parent-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      // Inisialisasi Swiper Induk
+      function parentSwiper() {
+        return new Swiper(".parent-swiper", {
+          navigation: {
+            nextEl: ".parent-next",
+            prevEl: ".parent-prev",
+          },
+          // Set options as needed
+          loop: true,
+        });
+      }
+      function childSwiper() {
+        return new Swiper(".child-swiper", {
+          navigation: {
+            nextEl: ".child-next",
+            prevEl: ".child-prev",
+          },
+          loop: true,
+          nested: true, // Enable nested Swiper
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          effect: "fade",
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const swiper1 = parentSwiper();
+        const swiper2 = childSwiper();
+      });
+    </script>
+  </body>
+</html>

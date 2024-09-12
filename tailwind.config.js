@@ -12,6 +12,7 @@ module.exports = {
       },
       backgroundColor: {
         dgreen: '#114232',
+        dgreen2: '#0B2C22',
         grass: '#87A922',
         ijo: '#0E5E24',
         ylow: '#FCDC2A',
