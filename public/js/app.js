@@ -14,12 +14,8 @@ function initSwiper() {
     },
     on: {
       slideChange: function () {
-        const prevButton = document.querySelector(
-          ".custom-swiper-button-prev"
-        );
-        const nextButton = document.querySelector(
-          ".custom-swiper-button-next"
-        );
+        const prevButton = document.querySelector(".custom-swiper-button-prev");
+        const nextButton = document.querySelector(".custom-swiper-button-next");
 
         if (this.activeIndex > 0) {
           prevButton.classList.remove("opacity-0");
@@ -322,4 +318,51 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     ],
   });
+});
+
+const btnSlide = document.getElementById("btn-slide");
+const header1 = document.getElementById("header1");
+const header12 = document.getElementById("header2");
+
+let morphing = anime.timeline({
+  autoplay: false, // Animasi tidak berjalan otomatis
+});
+
+morphing
+  .add({
+    targets: "#btn-slide",
+    opacity: 0,
+    duration: 1000,
+    easing: "easeInOutQuad",
+  })
+  .add({
+    targets: ".morph",
+    d: [
+      {
+        value:
+          "M1226 1.07421L0.00012207 0.0740967C0.00012207 0.0740967 -93.5299 426.95 -26.9999 614.5C92.928 952.579 531 1303 623 1303C715 1303 1135.15 1023.52 1258.5 614.5C1306 457 1226 1.07421 1226 1.07421Z",
+      },
+    ],
+    easing: "easeInOutQuad",
+    duration: 1000,
+  })
+  .add({
+    targets: "#header1",
+    opacity: 0,
+    duration: 1000,
+    easing: "easeInOutQuad",
+    complete: () => {
+      header1.style.display = "none";
+      header2.style.display = "flex";
+    },
+  })
+  .add({
+    targets: ".morph",
+    easing: "easeInOutQuad",
+    duration: 2000,
+    translateY: [0, "100%"],
+  });
+
+btnSlide.addEventListener("click", () => {
+  morphing.play();
 });

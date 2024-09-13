@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Papan Informasi | Taman Sekartaji</title>
     <link rel="stylesheet" href="/public/css/output.css" />
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -21,21 +22,49 @@
       href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
       rel="stylesheet"
     />
+
+    <!-- anime js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
-  <body>
-    <div class="wipe-container">
-      <div class="wipe font-poppins font-semibold">
+  <body class="overflow-hidden">
+    <!-- <div class="wipe-container">
+      <div class="wipe">
         <div>
           <h2>Taman <span></span></h2>
-          <h1 class="-mt-10">Sekataji</h1>
+          <h1>Sekataji</h1>
         </div>
       </div>
-    </div>
+    </div> -->
+
     <main
-      id="headers"
+      id="header1"
       data-barba="wrapper"
       class="w-screen h-screen relative overflow-hidden bg-gradient-to-br from-green-900 to-dgreen"
     >
+      <svg
+        id="morph"
+        width="100%"
+        viewBox="0 0 1224 677"
+        preserveAspectRatio="none"
+      >
+        <text fill="black">Next</text>
+        <path
+          class="morph"
+          d="M1224 1.91381L-2 0.9137C-2 0.9137 171 3.41364 316.5 3.41374C602.5 30.9137 561 80.6312 623.5 77.9138C669.5 75.9138 705 20.4138 894.5 4.91384C1003.21 -3.97803 1224 1.91381 1224 1.91381Z"
+          fill="#13841E"
+        ></path>
+      </svg>
+      <button
+        id="btn-slide"
+        class="text-white font-bold text-[2vw] absolute left-[48.5%] bottom-5 z-50"
+      >
+        Next
+      </button>
+
       <section
         class="w-full h-full overflow-hidden"
         data-barba="container"
@@ -81,15 +110,294 @@
           src="../public/img/assets/img-welcome.png"
           alt=""
         />
-        <a href="./slide.html">
-          <img
-            class="left-[30%] absolute w-1/2 -bottom-7 transition-all ease-in hover:bottom-0 z-10 duration-300 cursor-pointer"
-            src="../public/img/assets/button-to-bottom.svg"
-            alt=""
-            srcset=""
-          />
-        </a>
       </section>
+    </main>
+    <main
+      id="header2"
+      data-barba="wrapper"
+      class="g-dgreen w-full h-screen text-white bg-dgreen relative overflow-hidden"
+    >
+      <div
+        class="swiper w-full h-full"
+        data-barba="container"
+        data-barba-namespace="page-b"
+      >
+        <div class="swiper-wrapper">
+          <div
+            class="absolute z-[99] w-full -top-20 hover:-top-10 duration-[.5s] transition-all flex justify-center"
+          >
+            <a href="./index.html" class="w-fit">
+              <img
+                src="/public/img/assets/Group 79 (6).svg"
+                class="w-[750px]"
+                alt=""
+              />
+            </a>
+          </div>
+          <section class="swiper-slide">
+            <div class="w-screen h-screen font-poppins flex justify-between">
+              <div class="basis-[50%] relative bg-grass overflow-hidden">
+                <div
+                  class="img-sekartaji w-full h-[50%] z-[5] bg-center bg-no-repeat bg-cover"
+                ></div>
+                <div class="w-full relative h-[50%]">
+                  <div
+                    class="fasilitas relative z-10 bg-contain bg-no-repeat overflow-hidden w-full h-[28%]"
+                  ></div>
+                  <div
+                    class="bg-sekartaji w-full absolute h-[40%] start-0 bg-start bg-[length:100%_100%] bg-no-repeat top-0"
+                  ></div>
+                  <div
+                    class="bg-sekartaji2 w-[45%] h-[30%] absolute bottom-[5%] bg-start bg-[length:100%_100%] bg-no-repeat right-[5%]"
+                  ></div>
+                  <div class="relative">
+                    <div
+                      class="w-fit mt-[3%] mx-[8%] me-[13%] gap-[.8vw] flex font-righteous"
+                    >
+                      <div class="flex flex-col gap-[.8vw]">
+                        <div
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-[.8vw] shadow-lg shadow-black/35 bg-dgreen"
+                        >
+                          <span class="material-symbols--smoke-free"></span>
+                          <span class="xl:text-[1.2vw] text-[1vw]"
+                            >Area Bebas Asap Rokok</span
+                          >
+                        </div>
+                        <div
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-[.8vw] shadow-lg shadow-black/35 bg-dgreen"
+                        >
+                          <span class="lucide--circle-parking"></span>
+                          <span class="xl:text-[1.2vw] text-[1vw]"
+                            >Area Parkir</span
+                          >
+                        </div>
+                        <div
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-[.8vw] shadow-lg shadow-black/35 bg-dgreen"
+                        >
+                          <span class="lucide--cctv"></span>
+                          <span class="xl:text-[1.2vw] text-[1vw]">CCTV</span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-[.8vw]">
+                        <div
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-[.8vw] shadow-lg shadow-black/35 bg-dgreen"
+                        >
+                          <span class="marketeq--water-tap"></span>
+                          <span class="xl:text-[1.2vw] text-[1vw]"
+                            >Keran Air Siap Minum</span
+                          >
+                        </div>
+                        <div
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-[.8vw] shadow-lg shadow-black/35 bg-dgreen"
+                        >
+                          <span class="material-symbols--wifi"></span>
+                          <span class="xl:text-[1.2vw] text-[1vw]"
+                            >Free Wifi</span
+                          >
+                        </div>
+                        <div
+                          class="px-[1vw] py-[.5vw] w-[100%] flex items-center gap-[.8vw] shadow-lg shadow-black/35 bg-dgreen"
+                        >
+                          <span class="ph--plugs"></span>
+                          <span class="xl:text-[1.2vw] text-[1vw]"
+                            >Colokan Listrik</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basis-[50%] relative">
+                <div class="w-fit py-[5%] px-[9%]">
+                  <div class="fade-up font-semibold overflow-hidden">
+                    <h1 class="text-[3.4vw]">
+                      Taman
+                      <span class="inline-block bg-white w-[20%] h-1"></span>
+                    </h1>
+
+                    <h1 class="text-[4.2vw] lg:-mt-6 md:-mt-5 mt-0">
+                      Sekartaji
+                    </h1>
+                  </div>
+                  <div
+                    class="text-[1vw] mt-[1.5vw] pe-[5%] text-justify font-righteous w-[80%] h-[10vw] custom-scrollbar overflow-y-scroll"
+                  >
+                    <p>
+                      Selamat datang di Taman Sekartaji, oase hijau di jantung
+                      Kota Kediri! Taman ini dirancang sebagai ruang terbuka
+                      yang menggabungkan keindahan alam dengan kenyamanan
+                      fasilitas modern, menjadikannya tempat yang sempurna untuk
+                      bersantai dan beraktivitas. Dikelilingi oleh pepohonan
+                      rindang dan berbagai jenis bunga yang mekar sepanjang
+                      tahun, Taman Sekartaji menawarkan udara segar dan suasana
+                      tenang yang ideal untuk melepas penat.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="information w-[83%] top-[55%] -ms-[8%] absolute h-[40%] bg-ijo px-[7%] py-[3.5%] shadow-lg shadow-black/20"
+                >
+                  <h1 class="font-righteous text-[2vw]">Detail Informasi</h1>
+                  <div class="mt-[1.3vw] w-[100%] text-[1.2vw]">
+                    <div class="flex mb-[2%] justify-start items-center">
+                      <span
+                        class="material-symbols-light--width-wide-outline me-[2%]"
+                      ></span>
+                      <p class="w-[30%]">Luas</p>
+                      <span class="w-full">: 7000 m<sup>2</sup></span>
+                    </div>
+                    <div class="flex mb-[2%] justify-start items-center">
+                      <span class="game-icons--inauguration me-[2%]"></span>
+                      <p class="w-[30%]">Peresmian</p>
+                      <span class="w-full">: 26 September 2017</span>
+                    </div>
+                    <div class="flex mb-[2%] justify-start items-center">
+                      <span class="hugeicons--manager me-[2%]"></span>
+                      <p class="w-[30%]">Pengelola</p>
+                      <span class="w-full overflow-hidden"
+                        >: Pemerintahan Kota Kediri</span
+                      >
+                    </div>
+                    <div class="flex mb-[2%] justify-start items-center">
+                      <span class="ic--outline-place me-[2%]"></span>
+                      <p class="w-[30%]">Alamat</p>
+                      <span class="w-full"
+                        >: Jl. Veteran, Mojoroto, Kediri</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute w-[20%] bg-white/25 bottom-[3%] right-[20%] backdrop-blur-md shadow-lg shadow-black/25 p-[2%] text-center text-xs flex justify-center flex-col gap-[1.3vw]"
+                >
+                  <span class="text-[1.2vw] leading-[1.2vw]"
+                    >QR Code video SIBI bagi penyandang Tunarungu</span
+                  >
+                  <img src="/public/img/assets/Group 65.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="swiper-slide">
+            <div class="w-screen h-screen flex">
+              <div
+                class="img-content pb-5 w-1/2 h-full relative flex flex-col gap-8 items-center"
+              >
+                <div class="h-1/2 w-full relative pt-2">
+                  <span
+                    class="absolute w-[1.5%] h-[40%] bg-ylow -right-[1.6%] z-20 bottom-0"
+                  ></span>
+                  <img
+                    class="h-full absolute -right-[23%] maskImage"
+                    src="../public/img/sekartaji.jpg"
+                    alt="park"
+                  />
+                </div>
+                <article class="w-10/12 h-1/2">
+                  <h1 class="font-poppins text-6xl text-right font-semibold">
+                    smoke-free area
+                  </h1>
+                  <div class="w-full flex justify-end gap-6 items-center mt-3">
+                    <span class="w-1/5 h-[6px] rounded bg-white"></span>
+                    <p class="font-righteous font-normal text-2xl">
+                      Sekartaji Kediri
+                    </p>
+                  </div>
+                  <div
+                    class="flex gap-12 pb-6 items-start justify-between mt-8"
+                  >
+                    <div
+                      class="w-1/5 pt-14 pb-3 px-1 containerQrCode flex flex-col gap-5 border-0 rounded-md items-center text-center"
+                    >
+                      <p class="font-righteous text-[15px] leading-5">
+                        SIBI video QR Code for the Deaf
+                      </p>
+                      <img
+                        class="border-0 rounded-lg w-[90%]"
+                        src="../public/img/qr-code.png"
+                        alt=""
+                      />
+                    </div>
+                    <p class="w-3/4 text-justify text-lg">
+                      Sekartaji Park now features a designated smoke-free area
+                      as part of an effort to maintain a healthier and more
+                      comfortable environment for visitors. This area is
+                      designed to offer a clean and fresh space, free from
+                      cigarette smoke, allowing everyone, including children and
+                      the elderly, to enjoy fresh air without disturbance. With
+                      this facility, Sekartaji Park becomes an even more ideal
+                      place to relax and enjoy the beauty of nature in peace and
+                      safety.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div
+                class="img-content w-1/2 h-full relative bg-ijo flex flex-col-reverse gap-8 items-center"
+              >
+                <span
+                  class="absolute w-[1.5%] h-[20%] bottom-[15%] bg-ylow -left-[1.6%] z-20"
+                ></span>
+                <div class="h-1/2 w-full relative pt-2">
+                  <img
+                    class="h-full absolute left-[5%] maskImage"
+                    src="../public/img/sekartaji.jpg"
+                    alt="park"
+                  />
+                </div>
+                <article class="w-10/12 h-1/2 pt-10">
+                  <h1 class="font-poppins text-6xl font-semibold">
+                    smoke-free area
+                  </h1>
+                  <div
+                    class="w-full flex justify-start gap-6 items-center mt-3"
+                  >
+                    <p class="font-righteous font-normal text-2xl">
+                      Sekartaji Kediri
+                    </p>
+                    <span class="w-1/5 h-[6px] rounded bg-white"></span>
+                  </div>
+                  <div
+                    class="flex gap-12 pb-6 flex-row-reverse justify-between items-start mt-8"
+                  >
+                    <div
+                      class="w-1/5 pt-14 pb-3 -mt-10 px-1 containerQrCode flex flex-col gap-5 border-0 rounded-md items-center text-center"
+                    >
+                      <p class="font-righteous text-[15px] leading-5">
+                        SIBI video QR Code for the Deaf
+                      </p>
+                      <img
+                        class="border-0 rounded-lg w-[90%]"
+                        src="../public/img/qr-code.png"
+                        alt=""
+                      />
+                    </div>
+                    <p class="w-3/4 text-justify text-lg">
+                      Sekartaji Park now features a designated smoke-free area
+                      as part of an effort to maintain a healthier and more
+                      comfortable environment for visitors. This area is
+                      designed to offer a clean and fresh space, free from
+                      cigarette smoke, allowing everyone, including children and
+                      the elderly, to enjoy fresh air without disturbance. With
+                      this facility, Sekartaji Park becomes an even more ideal
+                      place to relax and enjoy the beauty of nature in peace and
+                      safety.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- <section class="swiper-slide">
+            <div
+              class="w-screen h-screen font-poppins flex justify-between"
+            ></div>
+          </section> -->
+        </div>
+      </div>
+      <!-- If we need navigation buttons -->
+      <!-- Tombol Kustom -->
       <div class="nex-prev absolute w-full top-[50%] z-[99]">
         <div class="flex justify-between">
           <div
@@ -117,19 +425,17 @@
         </div>
       </div>
     </main>
-
     <!-- ========= barba js ======= -->
     <script src="https://unpkg.com/@barba/core"></script>
     <!-- ========= load gsap animtion ========= -->
     <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
-    <!-- CustomEase Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"
       integrity="sha512-O+atZ/gABlcFlpIoLQR04f72qHqZWKwTVsQZHqk/8VE2nrzDlnqhXbnXP7Gh/TyhpPT8tEUm5A580GG8AloHTA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
     <script type="module" src="/public/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
