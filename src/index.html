@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Papan Informasi | Taman Sekartaji</title>
     <link rel="stylesheet" href="/public/css/output.css" />
+    <!-- Vanila CSS -->
     <link rel="stylesheet" href="/public/css/style.css" />
+
+    <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -23,22 +26,28 @@
     />
   </head>
   <body>
+    <!-- Slide Untuk transisi Barba.js -->
+    <!-- Container pembungkus page transition barba -->
     <div class="wipe-container">
-      <div class="relative w-full h-full">
-        <div class="wipe bg-ylow"></div>
-        <div class="wipe bg-grass"></div>
-        <div
-          class="wipe bg-dgreen font-poppins font-semibold flex justify-center items-center"
-        >
-          <div>
-            <h2 class="text-[6vw]">
-              Taman <span class="inline-block w-[15vw] h-[1vw] bg-white"></span>
-            </h2>
-            <h1 class="-mt-[4vw] text-[10vw]">Sekartaji</h1>
-          </div>
+      <!-- child content untuk menampilkan transisi Barbanya -->
+      <div class="wipe bg-ylow"></div>
+      <div class="wipe bg-grass"></div>
+      <div
+        class="wipe bg-dgreen font-poppins font-semibold flex justify-center items-center"
+      >
+        <div>
+          <h2 class="text-[6vw]">
+            Taman <span class="inline-block w-[15vw] h-[1vw] bg-white"></span>
+          </h2>
+          <h1 class="-mt-[4vw] text-[10vw]">Sekartaji</h1>
         </div>
       </div>
+      <!-- child content untuk menampilkan transisi Barbanya -->
     </div>
+    <!-- Container pembungkus page transition barba -->
+
+
+    <!-- Pembungkus Halaman -->
     <main
       id="headers"
       data-barba="wrapper"
@@ -122,19 +131,22 @@
       </div>
     </main>
 
-    <!-- ========= barba js ======= -->
-    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- jsdelivr Barba -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <!-- ========= load gsap animtion ========= -->
     <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
-    <!-- CustomEase Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
+    <!-- GSAP -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"
       integrity="sha512-O+atZ/gABlcFlpIoLQR04f72qHqZWKwTVsQZHqk/8VE2nrzDlnqhXbnXP7Gh/TyhpPT8tEUm5A580GG8AloHTA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- Custom Ease GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CustomEase.min.js"></script>
+    <!-- Kode Javascript -->
     <script type="module" src="/public/js/app.js"></script>
+    <!-- swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

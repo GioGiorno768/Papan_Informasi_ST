@@ -1,3 +1,5 @@
+
+// Swiper slide parent
 function initSwiper() {
   return new Swiper(".swiper", {
     // Optional parameters
@@ -40,6 +42,7 @@ function initSwiper() {
   });
 }
 
+// Swiper slide Child (bagian Fasilitas page2 slide 1)
 function childSwiper() {
   return new Swiper(".child-swiper", {
     loop: true,
@@ -59,13 +62,15 @@ function childSwiper() {
   });
 }
 
+
 document.addEventListener("DOMContentLoaded", () => {
   let swiper = initSwiper(); // Inisialisasi Swiper pada halaman pertama kali dimuat
   let swiper2 = childSwiper(); // Inisialisasi Swiper pada halaman pertama kali dimuat
   const nav = document.querySelector(".nex-prev");
   nav.style.display = "none";
-  console.log(nav);
+  // console.log(nav);
 
+  // Animasi halaman pertama ketika pertama kali dimuat
   gsap.fromTo(
     ".swipe-right",
     {
@@ -84,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ),
     }
   );
+
   gsap.fromTo(
     ".swipe-up",
     {
@@ -99,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ease: "circ.out",
     }
   );
+
   gsap.fromTo(
     ".swipe-left",
     {
@@ -131,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
     ),
   });
+
   gsap.fromTo(".b-sekartaji", {
     x: "20vw",
     opacity: 0
@@ -144,13 +152,17 @@ document.addEventListener("DOMContentLoaded", () => {
       "M0,0 C0,0.408 0.235,0.783 0.444,0.822 0.655,0.861 0.723,0.737 1,0.737 "
     ),
   });
-
+  // Animasi halaman pertama ketika pertama kali dimuat
+  
+  // inisiasi Animasi Barba JS
   barba.init({
     transitions: [
       {
         name: "opacity-transition",
+        
+        // Animasi animasi ketika berpindah 
         async leave(data) {
-          let namespace = data.current.namespace;
+          let namespace = data.current.namespace; //mengambil data namespace (data-barba-namespace="page-a") pada HTML
 
           if (namespace === "page-a") {
             gsap.fromTo(
@@ -333,10 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
           swiper = initSwiper(); // Inisialisasi Swiper pada halaman baru
           swiper2 = childSwiper(); // Inisialisasi Swiper pada halaman baru
         },
-        // async once(data) {
-        //   gsap.set(data.current.namespace, { y: "-100%" });
-        //   swiper = initSwiper(); // Inisialisasi Swiper pada halaman pertama kali dimuat
-        // },
       },
     ],
   });

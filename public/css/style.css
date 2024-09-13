@@ -65,6 +65,8 @@
 .inner-swiper:hover {
   box-shadow: 0.3vw 0.3vw 0.5vw rgba(0, 0, 0, 0.384);
 }
+
+
 /* Warna bullet pagination default */
 .swiper-pagination .swiper-pagination-bullet {
   width: 0.7vw;
