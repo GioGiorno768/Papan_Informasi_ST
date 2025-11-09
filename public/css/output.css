@@ -776,16 +776,16 @@ html {
   margin-top: 2vw;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .inline-block {
   display: inline-block;
 }
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-\[\.3vw\] {
@@ -938,6 +938,10 @@ html {
 
 .w-\[85\%\] {
   width: 85%;
+}
+
+.w-\[8vw\] {
+  width: 8vw;
 }
 
 .w-\[90\%\] {

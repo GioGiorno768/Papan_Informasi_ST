@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 onComplete: () => {
                   swiper = initSwiper();
-                  swiper2 = childSwiper() // Inisialisasi ulang Swiper setelah masuk halaman baru
+                  // swiper2 = childSwiper() // Inisialisasi ulang Swiper setelah masuk halaman baru
                 },
               }
             );
@@ -339,9 +339,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Hapus inisialisasi Swiper sebelumnya dan inisialisasi ulang pada halaman baru
           if (swiper) {
+            console.log("asaas");
+            
             swiper.destroy(); 
             swiper2.destroy()// Hapus inisialisasi Swiper sebelumnya
           }
+           
           swiper = initSwiper(); // Inisialisasi Swiper pada halaman baru
           swiper2 = childSwiper(); // Inisialisasi Swiper pada halaman baru
         },

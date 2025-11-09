@@ -50,7 +50,7 @@
     <main
       id="headers"
       data-barba="wrapper"
-      class="g-dgreen w-full h-screen text-white bg-dgreen relative overflow-hidden"
+      class="w-screen h-screen relative overflow-hidden bg-dgreen"
     >
       <!-- Class swiper sebagai pembungkus swiper js yang digunakan untuk menginisasi swiper JS -->
       <div class="swiper" data-barba="container" data-barba-namespace="page-b">
@@ -257,12 +257,14 @@
 
                     <!-- Bagian QR Code -->
                     <div
-                      class="absolute w-[35%] qr-code backdrop-blur-[1vw] -bottom-[35%] -right-[20%] shadow-lg px-[4%] pt-[10%] pb-[3%] text-center text-xs flex justify-center flex-col gap-[1vw]"
+                      class="absolute w-[35%] qr-code backdrop-blur-[1vw] -bottom-[35%] -right-[20%] shadow-lg px-[4%] pt-[10%] pb-[3%] text-center text-xs flex items-center flex-col gap-[1vw]"
                     >
                       <span class="text-[1vw] leading-[1.2vw]"
                         >QR Code video SIBI bagi penyandang Tunarungu</span
                       >
-                      <img src="/public/img/assets/Group 65.svg" alt="" />
+                      <div class="w-[8vw] h-[8vw]">
+                        <img src="/public/img/assets/Group 65.svg" alt="" class="w-full" />
+                      </div>
                     </div>
                     <!-- Bagian QR Code -->
                   </div>
@@ -442,6 +444,13 @@
             </button>
           </div>
         </div>
+      </div>
+      <div>
+        <div class="swipe-right hidden"></div>
+        <div class="swipe-up hidden"></div>
+        <div class="swipe-left hidden"></div>
+        <div class="b-kediri hidden"></div>
+        <div class="b-sekartaji hidden"></div>
       </div>
     </main>
 
